@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math as math
 
-excel = pd.read_csv('../../Downloads/course-files/pokemon.csv')C:\Users\przem\Documents\GitHub\DataAnalysis
+excel = pd.read_csv('pokemon.csv')
 from datetime import datetime
 
 #birthday = datetime(1996, 2, 4, 0, 0, 0)
