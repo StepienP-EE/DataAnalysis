@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import math as math
 import random as rnd
 
+
 #Deklaracja dataseries_1
 weekdays = ["Monday",'Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
 weekdaysSeries = pd.Series(weekdays)
@@ -22,6 +23,22 @@ for i in range(100000):
     dataAsStringList.append(i*rnd.random())
 dataAsStringSeries=pd.Series(dataAsStringList)
 
+# Deklaracja dataseries_4
+cities = ["Shanghai", "Beijing", "Istanbul"]
+population = [24183300, 20794100, 15030000]
+citypop = pd.Series(index=cities, data=population)
+
+def dataSeries_4():
+
+
+    print(citypop.sum())
+    print(citypop.mean())
+    print(citypop.index)
+    print(citypop.keys())
+    print(citypop.values)
+    print(citypop.tolist())
+
+
 def printing_DataSeries(name):
     print(name)
     print("Size: \t", name.size)
@@ -36,9 +53,10 @@ def printing_DataSeries(name):
 
 
 if __name__ == '__main__':
+    print("Wersja " + pd.__version__)
     #print(weekdaysSeries)
     #print(freeDaysSeries)
     #print(holidaysSeries)
-    #holidaysSeries.size
-    printing_DataSeries(dataAsFloatSeries)
-    printing_DataSeries(dataAsStringSeries)
+    #dataSeries_4()
+    #printing_DataSeries(dataAsFloatSeries)
+    #printing_DataSeries(dataAsStringSeries)
