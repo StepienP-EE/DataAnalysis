@@ -38,6 +38,19 @@ def dataSeries_4():
     print(citypop.values)
     print(citypop.tolist())
 
+def dataSeries_6():
+
+    age = ["do 6", "7-14", "15-17", "18-24", "25-39", "40-59", "60 i więcej"]
+    incident = [14, 334, 312, 5823, 9491, 7486, 4343]
+    incidents = pd.Series(data=incident, index=age)
+    print(incidents.where(incidents > 1000).dropna())
+    incident1000 = incidents.where(incidents > 1000).dropna()
+    print(incident1000)
+    print(incidents.filter(items=["18-24", "25-39", "40-59"]))
+    incidents.where(incidents <= 1000, inplace=True)
+    print(incidents)
+    incidents.dropna(inplace=True)
+    print(incidents)
 
 def printing_DataSeries(name):
     print(name)
@@ -60,3 +73,4 @@ if __name__ == '__main__':
     #dataSeries_4()
     #printing_DataSeries(dataAsFloatSeries)
     #printing_DataSeries(dataAsStringSeries)
+    dataSeries_6()
